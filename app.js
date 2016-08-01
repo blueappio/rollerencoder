@@ -3,8 +3,8 @@ var app;
   app = angular.module('Encoder', ['ngMaterial', 'nvd3'])
   .config(function($mdThemingProvider) {
     $mdThemingProvider.theme('default')
-      .primaryPalette('blue-grey')
-      .accentPalette('blue');
+      .primaryPalette('blue')
+      .accentPalette('blue-grey');
     $mdThemingProvider.theme('success-toast');
     $mdThemingProvider.theme('error-toast');
     
