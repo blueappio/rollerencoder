@@ -12,11 +12,9 @@
             gattip.once('ready', function(gateway) {
                 function onScan(peripheral) {
                     var mfrData;
-                    if (peripheral.advdata) {
-                        mfrData = peripheral.advdata.manufacturerData["02F4"] || peripheral.advdata.manufacturerData["02f4"];
-                    } else {
-                        mfrData = peripheral.getMfrData('02F4') || peripheral.getMfrData('02f4');
-                    }
+                    
+                    mfrData = peripheral.getMfrData('02F4') || peripheral.getMfrData('02f4');
+                    
                     if (mfrData) {
                         if (!rollerencoder.peripherals[peripheral.uuid]) {
                             peripheral.counterGraphData = [{
