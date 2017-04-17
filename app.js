@@ -16,6 +16,9 @@ app.controller('mainController', function($scope, $mdToast){
 
     $scope.rollerencoder = rollerencoder;
 
+    // Disabling the mouse right click event
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
     // ---------- Graph Code START -----------
     $scope.options = {
         chart: {
